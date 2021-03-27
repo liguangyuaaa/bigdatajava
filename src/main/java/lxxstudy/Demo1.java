@@ -7,7 +7,7 @@ import java.util.ArrayList;
 public class Demo1 {
     @Test
     public void stringReplace() {
-        String str = "  We we how olo Are  asd   Happy.";
+        String str = "  We we how olo Are  asd  213 Happy.";
         String[] words = str.split(" ");
 
         System.out.println(words.length);
