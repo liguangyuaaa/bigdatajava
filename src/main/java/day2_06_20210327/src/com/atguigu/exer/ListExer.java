@@ -1,4 +1,4 @@
-package day06.src.com.atguigu.exer;
+package day2_06_20210327.src.com.atguigu.exer;
 
 import org.junit.Test;
 
