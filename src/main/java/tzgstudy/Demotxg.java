@@ -1,4 +1,4 @@
-package txgstudy;
+package tzgstudy;
 
 public class Demotxg {
 }
