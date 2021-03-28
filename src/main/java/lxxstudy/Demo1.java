@@ -1,10 +1,11 @@
 package lxxstudy;
 
-import com.sun.tools.classfile.StackMapTable_attribute;
+import com.google.common.base.Supplier;
 import org.junit.Test;
 import org.apache.commons.lang.StringUtils;
 
 import java.util.*;
+import java.util.function.Consumer;
 
 public class Demo1 {
     @Test
@@ -151,6 +152,10 @@ public class Demo1 {
         while(iterator.hasNext()){
             System.out.println(iterator.next());
         }
+
+        for (Object o : set) {
+            System.out.println("for加强"+o);
+        }
     }
     /*
     1.向TreeSet中添加的数据，要求是相同类的对象。
@@ -160,7 +165,6 @@ public class Demo1 {
     3.自然排序中，比较两个对象是否相同的标准为：compareTo()返回0.不再是equals().
     4.定制排序中，比较两个对象是否相同的标准为：compare()返回0.不再是equals().
      */
-
 
     @Test
     public void treesettest(){
@@ -178,7 +182,7 @@ public class Demo1 {
         }
     }
     @Test
-    public void foreach(){
+    public void listtest(){
         ArrayList<Object> list = new ArrayList<>();
         list.add(123);
         list.add(123);
@@ -191,14 +195,87 @@ public class Demo1 {
         for (int i = 0; i < list.size(); i++) {
             System.out.println(iterator.next());
         }
-
         int[] arr = {1,2,3,4,5};
         for (int i : arr) {
             System.out.println(i);
         }
-
+        System.out.println("+++++");
+        Iterator<Object> iterator1 = list.iterator();
+        while (iterator1.hasNext()){
+            System.out.println("while:"+iterator1.next());
+        }
         String[] strs = new String[]{"ddd","ccc","bbb","aaa"};
-        
+    }
+    @Test
+    public void forEach(){
+        ArrayList<Integer> arrayList = new ArrayList();
+        arrayList.add(123);
+        arrayList.add(123);
+        arrayList.add(456);
+        arrayList.add(789);
+        int[] ints = new int[]{1,2,3,4};
+        Iterator<Integer> iterator = arrayList.iterator();
+        while (iterator.hasNext()){
+            System.out.println("while"+"----"+iterator.next());
+        }
+        for (int i = 0; i < arrayList.size(); i++) {
+            System.out.println("for"+"----"+ arrayList.get(i));
+        }
+        for (Integer integer : arrayList) {
+            System.out.println("for增强"+"----"+integer);
+        }
+        int i = arrayList.indexOf(3);
+        int i1 = arrayList.indexOf(456);
+        int i2 = arrayList.lastIndexOf(123);
+        System.out.println(i);
+        System.out.println(i1);
+        System.out.println(i2);
+        arrayList.set(2,999);
+        arrayList.remove(3);
+        arrayList.add(888);
+        List<Integer> arrayList2 = arrayList.subList(1, 2);
+        arrayList.add(2,222);
+        List<Integer> list_a = Arrays.asList(777, 3);
+        arrayList.addAll(list_a);
+        System.out.println(arrayList);
+        //System.out.println(arrayList2);
+        arrayList.forEach(System.out::println);
+        arrayList.forEach(o -> System.out.println(o));
+    }
+
+    // Java 匿名类、lambda表达式、方法引用 的使用
+    public static void main(String[] args) {
+        List<Integer> list = new ArrayList<>();
+        list.add(123);
+        printList(list);
+        List<String> list2 = new ArrayList<>();
+        list2.add("string");
+        printList2(list2);
+        List<Boolean> list3 = new ArrayList<>();
+        list3.add(true);
+        printList3(list3);
+    }
+
+    /* printList() 的作用是使用 forEach() 方法打印List内容 */
+
+    // 使用匿名类
+    private static void printList(List<?> list) {
+        list.forEach(new Consumer<Object>() {
+            @Override
+            public void accept(Object o) {
+                System.out.println(o);
+            }
+        });
+    }
+
+    // 使用lambda表达式替代匿名类的使用
+    private static void printList2(List<?> list) {
+        list.forEach(o -> System.out.println(o));
+    }
+
+    // 对于已有的方法，可使用方法引用，这里直接引用println() 静态方法 打印内容
+    private static void printList3(List<?> list) {
+        list.forEach(System.out::println);
     }
 
 }
