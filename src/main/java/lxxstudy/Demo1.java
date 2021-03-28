@@ -275,6 +275,5 @@ public class Demo1 {
     private static void printList3(List<?> list) {
         list.forEach(System.out::println);
     }
-   /////////////////////
 }
 
