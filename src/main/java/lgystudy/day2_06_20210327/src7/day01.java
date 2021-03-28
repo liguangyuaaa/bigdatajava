@@ -7,8 +7,9 @@ public class day01 {
         System.out.println("java2");
         System.out.println("java3");
         System.out.println("java4");
-
         System.out.println("java5");
+
+        System.out.println("java6");
 
     }
 }
