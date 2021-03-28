@@ -10,6 +10,8 @@ public class day01 {
         System.out.println("java5");
 
         System.out.println("java6");
+          System.out.println("java6");
+            System.out.println("java6");
 
     }
 }
