@@ -6,9 +6,9 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="bigdemojava" />
         <module name="big-data-demo" />
         <module name="bigdatajava" />
+        <module name="bigdemojava" />
       </profile>
     </annotationProcessing>
   </component>
