@@ -58,7 +58,7 @@ public class TreeSetTest
                 if (o1 instanceof User && o2 instanceof User) {
                     User u1 = (User) o1;
                     User u2 = (User) o2;
-                    return u1.getName().compareTo(u2.getName());
+                    return u2.getName().compareTo(u1.getName());
                 } else {
                     throw new RuntimeException("输入的数据类型不匹配");
                 }
