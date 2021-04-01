@@ -2,7 +2,7 @@ package lgystudy.day2_07_20210328.java;
 
 import java.util.Objects;
 
-public class UserLgy implements Comparable{
+public class UserLgy {
     private String name;
     private int age;
 
@@ -43,29 +43,14 @@ public class UserLgy implements Comparable{
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         UserLgy userLgy = (UserLgy) o;
-        return age == userLgy.age &&
-                Objects.equals(name, userLgy.name);
+        return age == userLgy.age && Objects.equals(name, userLgy.name);
     }
 
     @Override
     public int hashCode() {
-        int result = name != null ? name.hashCode() : 0;
+        int result = name != null ? name.hashCode():0;
         result = 31 * result + age;
         return result;
     }
-
-    @Override
-    public int compareTo(Object o) {
-        if(o instanceof UserLgy){
-            UserLgy userLgy = (UserLgy)o;
-            int compare = -this.name.compareTo(userLgy.name);
-            if(compare != 0){
-                return compare;
-            }else{
-                return Integer.compare(this.age, userLgy.age);
-            }
-        }else{
-            throw new RuntimeException("输入的类型不匹配");
-        }
-    }
+    
 }
