@@ -5,7 +5,7 @@ package day1_09_20210402.atguigu.exer1;
  * 
  */
 public class Circle {
-	double radius;//半径
+	public double radius;//半径
 	
 	//求圆的面积
 	public double findArea(){

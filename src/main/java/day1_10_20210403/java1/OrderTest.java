@@ -1,6 +1,7 @@
 package day1_10_20210403.java1;
 
-import com.atguigu.java.Order;
+
+import day1_10_20210403.java.Order;
 
 public class OrderTest {
 	public static void main(String[] args) {
