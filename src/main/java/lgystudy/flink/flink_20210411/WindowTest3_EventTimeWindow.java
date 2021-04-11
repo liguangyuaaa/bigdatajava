@@ -44,6 +44,9 @@ public class WindowTest3_EventTimeWindow {
         minTempStream.print("minTemp");
         minTempStream.getSideOutput(outputTag).print("late");
 
+
+
+
         env.execute();
     }
 }
