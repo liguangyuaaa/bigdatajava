@@ -45,7 +45,7 @@ public class WindowTest3_EventTimeWindow {
         minTempStream.getSideOutput(outputTag).print("late");
 
 
-
+        System.out.println("sdfsdfasdfasd");
 
         env.execute();
     }
