@@ -46,6 +46,7 @@ public class WindowTest3_EventTimeWindow {
 
 
         System.out.println("sdfsdfasdfasd");
+        System.out.println("sdfsdfasdfasd");
 
         env.execute();
     }
