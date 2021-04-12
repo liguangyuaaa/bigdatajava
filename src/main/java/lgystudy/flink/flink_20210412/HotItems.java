@@ -163,6 +163,9 @@ public class HotItems {
             Thread.sleep(1000L);
             System.out.println("djoaidnv");
 
+            System.out.println("djoaidnv");
+            System.out.println("djoaidnv");
+            System.out.println("djoaidnv");
             out.collect(resultBuilder.toString());
         }
     }
