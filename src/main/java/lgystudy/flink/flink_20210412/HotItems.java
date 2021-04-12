@@ -161,6 +161,7 @@ public class HotItems {
 
             // 控制输出频率
             Thread.sleep(1000L);
+            System.out.println("djoaidnv");
 
             out.collect(resultBuilder.toString());
         }
