@@ -51,6 +51,9 @@ public class ScoreTestLgy {
             Object obj = v.elementAt(i);
             int score = (int)obj;
 
+
+
+
             if(maxScore - score <= 10){
                 level = 'A';
             }else if(maxScore - score <= 20){
