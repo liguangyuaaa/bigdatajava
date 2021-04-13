@@ -43,6 +43,9 @@ public class HotPages {
             @Override
             public long extractTimestamp(ApacheLogEvent element) {
                 return element.getTimestamp();
+
+
+
             }
         });
         
