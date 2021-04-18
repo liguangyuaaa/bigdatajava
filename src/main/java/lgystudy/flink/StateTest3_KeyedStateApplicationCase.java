@@ -58,6 +58,7 @@ public class StateTest3_KeyedStateApplicationCase {
             Double lastTemp = lastTempState.value();
             //如果状态不为null，那么就判断两次温度差值
             if( lastTemp != null){
+
                 Double diff = Math.abs(value.getTemperature() - lastTemp);
                 if(diff >= threshold)
                     out.collect(new Tuple3<>(value.getId(), lastTemp, value.getTemperature()));
