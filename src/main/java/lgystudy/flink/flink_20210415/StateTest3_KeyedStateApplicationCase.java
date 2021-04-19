@@ -1,4 +1,4 @@
-package lgystudy.flink;
+package lgystudy.flink.flink_20210415;
 
 import akka.japi.tuple.Tuple3;
 import lgystudy.flink.flink_20210411.SensorReading;
