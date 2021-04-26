@@ -7,8 +7,8 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="big-data-demo" />
-        <module name="bigdatajava" />
         <module name="bigdemojava" />
+        <module name="bigdatajava" />
       </profile>
     </annotationProcessing>
   </component>
