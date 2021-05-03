@@ -1,6 +1,8 @@
 package lgystudy.flink.flink_20210412;
 
-public class ItemViewCount {
+import lgystudy.flink.flink_20210502.HotItems;
+
+public class ItemViewCount extends HotItems.ItemCountAgg {
     private Long itemId;
     private Long windowEnd;
     private Long count;
